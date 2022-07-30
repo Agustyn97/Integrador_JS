@@ -147,4 +147,3 @@ const conectores = [
   localStorage.setItem("conectores", conectoresJson);
   const cargadoresJson = JSON.stringify(cargadores);
   localStorage.setItem("cargadores", cargadoresJson);
-
