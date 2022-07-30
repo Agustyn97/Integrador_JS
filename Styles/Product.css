@@ -1,0 +1,11 @@
+body {
+    background-color: var(--secondary-color);
+}
+
+
+  footer {
+    background-color: var(--main-bg-color);
+  }
+  .div-pfooter{
+    background-color: var(--secondary-color);
+  }

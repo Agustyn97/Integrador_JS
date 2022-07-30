@@ -1,0 +1,47 @@
+body {
+    background-color: var(--secondary-color);
+}
+.form-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10rem;
+    
+}
+form {
+    padding: 3rem;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.buttonIS {
+    width: 20rem;
+    height: 2rem;
+    color: var(--main-bg-color);
+    text-align: center;
+    background-color: var(--primary-color);
+}
+.iniciarsesion {
+    text-align: center;
+}
+.pis {
+    text-align: start;
+}
+.form-is {
+    height: 2rem;
+    width: 20rem;
+    margin-top: 1rem;
+    box-shadow: var(--main-box-shadow);
+ 
+}
+footer {
+    background-color: var(--main-bg-color);
+}
+
+.div-pfooter{
+    background-color: var(--secondary-color);
+} 

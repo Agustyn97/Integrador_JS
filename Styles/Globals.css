@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+:root {
+    --primary-color: #7ed957; 
+    --secondary-color: #d9d9d9; 
+    --main-bg-color: #ffffff;
+    --main-box-shadow: 0 3px 3px rgb(0 0 0 / 10%);
+    --secondary-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:unset;
+}
+
+.border-left {
+    border-left: 0.5px solid var(--secondary-color);
+}
+
+/* header */
+.header-logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: var(--main-box-shadow);
+    z-index: 99;
+}
+.logonav {
+    height: 4rem;
+    cursor: pointer;
+}
+.loguitos {
+    display: flex;
+    gap: 3rem;
+}
+
+.loguitos i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.loguitos i:hover, .redes i:hover{
+    color: var(--primary-color);
+}
+.search {
+    display: flex;
+}
+.barrasearch {
+    height: 2rem;
+    width: 30rem;
+    border-color: #000;
+    border-right: none;
+    outline: none;
+    text-align: center;
+}
+
+.botonsearch {
+    height: 2.25rem;
+    width: 4rem;
+    background-color: var(--primary-color);
+    border-color: #000;
+    border-left: none;
+    color: var(--main-bg-color);
+    cursor: pointer;
+}
+.menunav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--main-bg-color)
+}
+
+.menunav li{
+    padding: 0 3rem;
+}
+
+.itemnav a, .loguitos i{
+    color: #000;
+    transition-duration: 500ms;
+    padding-bottom: 1px;
+}
+
+.itemnav a:hover{
+   color: var(--primary-color);
+   border-bottom: 1px solid var(--primary-color);
+}
+
+.btn-productos{
+    cursor: pointer;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--secondary-color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.h4footer {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.h4footer i{
+    font-size: 1.2rem;
+}
+
+.redes i{
+    padding-left: 1rem;
+    font-size: 2rem;
+    transition-duration: 500ms;
+    cursor: pointer;
+}
+
+.containerf {
+    padding: 0.5rem 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-pfooter{
+    background-color: var(--main-bg-color);
+    padding: 0.2rem;
+    text-align: center;
+}
+
+
+
+
+
+
