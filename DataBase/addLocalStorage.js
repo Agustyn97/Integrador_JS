@@ -141,11 +141,9 @@ const conectores = [
   },
 ];
 
-window.onload = function () {
   const auricularesJson = JSON.stringify(auriculares);
   localStorage.setItem("auriculares", auricularesJson);
   const conectoresJson = JSON.stringify(conectores);
   localStorage.setItem("conectores", conectoresJson);
   const cargadoresJson = JSON.stringify(cargadores);
   localStorage.setItem("cargadores", cargadoresJson);
-};
