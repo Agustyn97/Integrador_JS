@@ -16,7 +16,8 @@
     
     formularioContacto.addEventListener("submit", (e) => {
         e.preventDefault()
-        submitMensaje()
+        submitMensaje(alert("aaa"))
+        console.log(preventDefault);
     })
     
     botonSubmit.addEventListener("click", () => {

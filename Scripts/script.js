@@ -1,7 +1,7 @@
 
-window.onload = function() {
-    /* auriculares */
-const auricularesList = [
+window.onload = function () {
+  /* auriculares */
+  const auricularesList = [
     {
       id: 1,
       nombre: "Auriculares Sony",
@@ -48,9 +48,9 @@ const auricularesList = [
       img: "../Images/Productos/Auriculares/auriculares_motorola.jpg"
     },
   ];
-  
+
   /* cargadores */
-  
+
   const cargadoresList = [
     {
       id: 1,
@@ -97,86 +97,94 @@ const auricularesList = [
       img: "../Images/Productos/Cargadores/cargador-iphone-12-pro-max.jpg"
     },
   ];
-  
+
   /* conectores */
-  
+
   const conectoresList = [
     {
       id: 1,
       nombre: "Cable Type C",
-      descripcion:"",
-      color:"Blanco",
+      descripcion: "",
+      color: "Blanco",
       precio: 500,
       img: "../Images/Productos/Conectores/cable_tipoC.jpg"
     },
     {
       id: 2,
       nombre: "Cable V3",
-      descripcion:"",
-      color:"Negro",
+      descripcion: "",
+      color: "Negro",
       precio: 600,
       img: "../Images/Productos/Conectores/cable_v3.jpg"
     },
     {
       id: 3,
       nombre: "Cable HDMI",
-      descripcion:"",
-      color:"Negro",
+      descripcion: "",
+      color: "Negro",
       precio: 999,
       img: "../Images/Productos/Conectores/cable-hdmi.jpg"
     },
     {
       id: 4,
       nombre: "Cable V8",
-      descripcion:"",
-      color:"Negro",
+      descripcion: "",
+      color: "Negro",
       precio: 250,
       img: "../Images/Productos/Conectores/cable_v8.jpg"
     },
     {
       id: 5,
       nombre: "Cable VGA",
-      descripcion:"",
-      color:"Negro",
+      descripcion: "",
+      color: "Negro",
       precio: 850,
       img: "../Images/Productos/Conectores/cable_vga.jpg"
     },
   ];
 
-  
-    const auricularesJson = JSON.stringify(auricularesList);
-    localStorage.setItem("auriculares", auricularesJson);
-    const conectoresJson = JSON.stringify(conectoresList);
-    localStorage.setItem("conectores", conectoresJson);
-    const cargadoresJson = JSON.stringify(cargadoresList);
-    localStorage.setItem("cargadores", cargadoresJson);
-  
 
-    const header = document.querySelector("header");
-    const footer = document.querySelector("footer");
+  const auricularesJson = JSON.stringify(auricularesList);
+  localStorage.setItem("auriculares", auricularesJson);
+  const conectoresJson = JSON.stringify(conectoresList);
+  localStorage.setItem("conectores", conectoresJson);
+  const cargadoresJson = JSON.stringify(cargadoresList);
+  localStorage.setItem("cargadores", cargadoresJson);
 
-    header.innerHTML = `  
+
+  const header = document.querySelector("header");
+  const footer = document.querySelector("footer");
+
+  header.innerHTML = `  
     <div class="header-logo">
-        <img class="logonav" src="../Images/Logos/logo_nav.png" alt="logo_nav" href="./Home.html" onclick=""/>
+        <a href="../index.html">
+        <img class="logonav" src="../Images/Logos/logo_nav.png" alt="logo_nav" />
+        </a>
+
         <div class="search">
             <input class="barrasearch" type="text" name="search" id="search" placeholder="Buscar productos..."/>
             <button class="botonsearch"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <div class="loguitos">
-            <a href="./Login.html"><i class="fa-solid fa-user "></i></a>
-            <i class="fa-solid fa-cart-shopping "></i>
+            <a href="../Views/Login.html">
+            <i class="fa-solid fa-user"></i>
+            </a>
+            <i class="fa-solid fa-cart-shopping" ></i>
         </div>
     </div>
     <div style="height: 4rem;"></div>
     <nav>
         <ul class="menunav">
-            <li class="itemnav"><a href="./Home.html">Inicio</a></li>
+            <li class="itemnav"><a href="../index.html">Inicio</a></li>
             <li class="itemnav border-left"><a class="btn-productos">Productos</a></li>
-            <li class="itemnav border-left"><a href="./Contact.html">Contactanos</a></li>
+            <li class="itemnav border-left"><a href="../Views/Contact.html">Contactanos</a></li>
+            <li class="itemnav border-left"><a href="../Views/Registration.html">Registro</a></li>
          </ul>
     </nav>`
+    
 
-    footer.innerHTML = `
+
+  footer.innerHTML = `
     <div class="containerf">
         <div class="ubicaciones">
             <h4 class="h4footer"> <i class="fa-solid fa-location-dot"></i>Av. San Martin 1281 Ciudad - Mendoza</h4>
@@ -194,77 +202,77 @@ const auricularesList = [
 
 
 
-    const auriculares = JSON.parse( localStorage.getItem("auriculares") ); 
-    const cargadores = JSON.parse( localStorage.getItem("cargadores") ); 
-    const conectores = JSON.parse( localStorage.getItem("conectores") ); 
+  const auriculares = JSON.parse(localStorage.getItem("auriculares"));
+  const cargadores = JSON.parse(localStorage.getItem("cargadores"));
+  const conectores = JSON.parse(localStorage.getItem("conectores"));
 
-    const todosLosProductos = auriculares.concat(cargadores,conectores);
+  const todosLosProductos = auriculares.concat(cargadores, conectores);
 
-    console.log(todosLosProductos);
-    /* NODOS */
-    const btnProductos = document.querySelector(".btn-productos");
+  /* NODOS */
+  const btnProductos = document.querySelector(".btn-productos");
 
-    const logoHeader = document.querySelector(".logonav");
-    const inputSearch = document.querySelector(".barrasearch");
-    const botonSearch = document.querySelector(".botonsearch");
+  const logoHeader = document.querySelector(".logonav");
+  const inputSearch = document.querySelector(".barrasearch");
+  const botonSearch = document.querySelector(".botonsearch");
 
-    const cardAuriculares = document.querySelector(".cardAuriculares");
-    const cardCargadores = document.querySelector(".cardCargadores");
-    const cardConectores = document.querySelector(".cardConectores");
+  const cardAuriculares = document.querySelector(".cardAuriculares");
+  const cardCargadores = document.querySelector(".cardCargadores");
+  const cardConectores = document.querySelector(".cardConectores");
+
+  
+  const containerCardsProduct = document.querySelector(".cardsLayout--cards")
+
+  /* FUNCIONES */
 
 
-    const containerCardsProduct = document.querySelector(".cardsLayout--cards")
+  /* redireccion product */
+  logoHeader.addEventListener("click", () => {
+    window.location.assign("./index.html")
+  })
 
-    /* FUNCIONES */
+  btnProductos.addEventListener("click", () => {
+    mapearProductos(todosLosProductos);
+  })
 
+  /* auriculares */
 
-    /* redireccion product */    
-    logoHeader.addEventListener("click", () => {
-        window.location.assign("../Views/Home.html")
+  cardAuriculares.addEventListener("click", () => {
+    mapearProductos(auriculares);
+  })
+
+  /* cargadores */
+
+  cardCargadores.addEventListener("click", () => {
+    mapearProductos(cargadores);
+  })
+
+  /* conectores */
+
+  cardConectores.addEventListener("click", () => {
+    mapearProductos(conectores);
+  })
+
+  /* header */
+
+  botonSearch.addEventListener("click", () => {
+    const pructoFiltrado = buscarProducto(inputSearch.value);
+    mapearProductos(pructoFiltrado);
+  })
+
+  function buscarProducto(valor) {
+    const productoBuscado = todosLosProductos.filter(producto => {
+      const regex = new RegExp(valor, 'gi');
+      return producto.nombre.match(regex)
     })
+    return productoBuscado;
+  }
 
-    btnProductos.addEventListener("click", () => {
-        mapearProductos(todosLosProductos);
-    })
+  function mapearProductos(pructoFiltrado) {
 
-    /* auriculares */
-    
-    cardAuriculares.addEventListener("click", () => {
-        mapearProductos(auriculares);
-    })
+    containerCardsProduct.innerHTML = ""
 
-    /* cargadores */
-
-    cardCargadores.addEventListener("click", () => {
-        mapearProductos(cargadores);
-    })
-
-    /* conectores */
-
-    cardConectores.addEventListener("click", () => {
-        mapearProductos(conectores);
-    })
-
-    /* header */
-
-    botonSearch.addEventListener("click", () => {
-        const pructoFiltrado = buscarProducto(inputSearch.value);
-        mapearProductos(pructoFiltrado);
-    })
-
-    function buscarProducto(valor) {
-        const productoBuscado =  todosLosProductos.filter(producto => {
-            const regex = new RegExp(valor, 'gi');
-            return producto.nombre.match(regex)
-        })
-        return productoBuscado;
-    }
-
-    function mapearProductos(pructoFiltrado) {
-        containerCardsProduct.innerHTML = ""
-
-        pructoFiltrado.map((producto)=>{
-            containerCardsProduct.innerHTML += ` 
+    pructoFiltrado.map((producto) => {
+      containerCardsProduct.innerHTML += ` 
             <div class="cardProduct">
                 <div >
                     <img class="cards--img" src="${producto.img}" alt="">
@@ -276,10 +284,23 @@ const auricularesList = [
                     </div>
                     <div class="cardinfo-precio">
                         <p class="colores"> Disponible en color: ${producto.color} </p>
-                        <p class="precio">$ ${producto.precio}</p>
+                        <div class="botonera">
+                          <p class="precio">$ ${producto.precio}</p>
+                          <button onclick="añadirCarrito()"><i class="fa-sharp fa-solid fa-cart-shopping fa-flip"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>`;
-        })
-    }
+    })
+  }
 }
+
+
+
+
+
+
+
+
+
+
